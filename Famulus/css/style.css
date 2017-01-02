@@ -1,0 +1,117 @@
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+/*  width: 100%;*/
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+/*  width: 100%;*/
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+/*  width: 100%;*/
+  border: 0;
+}
+
+/*@media only screen and (max-width: 1142px) {
+  .indexSlide {
+    padding-top: 202px!important;
+  }
+}
+@media only screen and (max-width: 969px) {
+  .indexSlide {
+    padding-top: 202px!important;
+  }
+}*/
+.indexSlide {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+.topUpRightMenu, .topDownRightMenu {
+  width: 99%;
+  line-height: 60px;
+}
+.topUpRightMenu {
+  border-bottom: 1px solid #ccc;
+}
+.topUpRightMenu {
+  margin-bottom: 8px;
+}
+.topUpRightMenu li {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.topDownRightMenu li {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 20px;
+}
+@media only screen and (min-width: 991px) {
+  .menuBtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .menuBtn {
+    line-height: 140px;
+    display: block;
+    margin-right: 20px;
+  }
+  .topDownRightMenu, .topUpRightMenu {
+    display: none;
+  }
+}
+
+.displayBlock {
+  display: block;
+  transition: display 1s ease-in-out;
+}
+
+.menuBtn i {
+  z-index: 999;
+}
+
+.responsiveMenu {
+  background-color: white;
+  position: absolute;
+  top: 135px;
+  width: 350px;
+  opacity: 0;
+  z-index: 99;
+  right: -350px;
+  display: none;
+}
+
+.responsiveMenu ul li {
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 14pt;
+}
+
+.btn {
+  border-radius: 0px!important;
+}

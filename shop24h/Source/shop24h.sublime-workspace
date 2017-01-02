@@ -136,7 +136,6 @@
 	},
 	"expanded_folders":
 	[
-		"/F/PROJECTS/HTML5/shop24h/Source",
 		"/F/PROJECTS/HTML5/shop24h/Source/css",
 		"/F/PROJECTS/HTML5/shop24h/Source/pages"
 	],
@@ -155,7 +154,7 @@
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -204,8 +203,8 @@
 						"selection":
 						[
 							[
-								4664,
-								4664
+								4276,
+								4276
 							]
 						],
 						"settings":

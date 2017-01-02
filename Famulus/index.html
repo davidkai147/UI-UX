@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Famulus Hotel</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/responsiveslides.js"></script>
+	<script src="js/moment-with-locales.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script src="js/jquery.myslide.js"></script>
+	<script type="text/javascript">
+	    $(function () {
+	        $('#datetimepicker1').datetimepicker();
+		    $('#datetimepicker2').datetimepicker();
+		     $(".rslides").responsiveSlides();
+			    	if ($(window).width() > 768) {
+				    	$('#indexSlide ul li img').css('height', $(window).height() - 142 );
+				    	$('#indexSlide ul li img').css('width', $(window).width());
+					} else $('#indexSlide ul li img').css('height', $(window).height() - 142 );
+					$(window).resize(function(event) {
+						if ($(window).width() > 768) {
+					    	$('#indexSlide ul li img').css('height', $(window).height() - 142 );
+					    	$('#indexSlide ul li img').css('width', $(window).width());
+						} else $('#indexSlide ul li img').css('height', $(window).height() - 142 );
+
+						if ($(window).width() > 990 && responsiveMenu == true) {
+							closeMenu();
+						}
+					});
+					var stringTotal = '';
+			 			stringTotal += $('#numOfRoom').html() + ' Room, '  + $('#numOfAdults').html() + ' Adults, ' + $('#numOfChildren').html() + ' Children';
+			 			$('#bookRlt').html(stringTotal);
+			});
+    </script>
+</head>
+<body>
+	<!-- Header -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<img src="images/logo.png">
+			</div>
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+				<div class="row menuBtn text-right">
+					<i style="cursor: pointer;" onclick="showMenu();" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+						<ul class="topUpRightMenu" id="topUpRightMenu">
+							<li>Famulus Home</li>
+							<li>Hotel & Resort</li>
+							<li>Contact Us</li>
+							<li><img src="images/vn.png">&nbsp;&nbsp;<img src="images/eng.png"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+						<ul class="topDownRightMenu" id="topDownRightMenu">
+							<li>Home</li>
+							<li>Accomodation</li>
+							<li>Package and Promotion</li>
+							<li>Facilities</li>
+							<li>Services</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row responsiveMenu" id="responsiveMenu">
+					<ul>
+						<li>Famulus Home</li>
+						<li>Hotel & Resort</li>
+						<li>Contact Us</li>
+						<li>Home</li>
+						<li>Accomodation</li>
+						<li>Package and Promotion</li>
+						<li>Facilities</li>
+						<li>Services</li>
+						<li><img src="images/vn.png">&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/eng.png"></li>
+					</ul>
+					<div style="position: absolute; top: -85px; right: 50px;"><i style="cursor: pointer;" onclick="closeMenu();" class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid indexSlide" id="indexSlide">
+		<ul class="rslides">
+		  	<li><img src="images/1.jpg" alt=""></li>
+		  	<li><img src="images/2.jpg" alt=""></li>
+		  	<li><img src="images/3.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="row" style="position: absolute; top: 205px; margin: 0 auto; z-index: 4; left: 40;">
+			<div class="col-xs-12 col-sm-8 col-md-4 col-lg-4">
+				<div class="panel panel-default">
+				<div class="panel-heading">REVERSE YOUR STAY</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+					                <div class='input-group date' id='datetimepicker1'>
+					                    <input type='text' class="form-control" placeholder="Check in"/>
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+					                <div class='input-group date' id='datetimepicker2'>
+					                    <input type='text' class="form-control" placeholder="Check out"/>
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<a href="#demo" data-toggle="collapse" style="text-decoration: none;">
+									<div class="well" style="cursor: pointer;">
+										<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span id="bookRlt"></span>
+									</div>
+								</a>
+								<div id="demo" class="collapse">
+									<div class="row" style="line-height: 34px; margin-bottom: 5px;">
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+											Room
+										</div>
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+											<div class="row">
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+													<button type="button" onclick="calcBooking('minusRoom')" class="btn btn-default">-</button>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+													<span id="numOfRoom">1</span>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+													<button type="button" onclick="calcBooking('plusRoom')" class="btn btn-default">+</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row" style="line-height: 34px; margin-bottom: 5px;">
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+											Adults
+										</div>
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+											<div class="row">
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+													<button type="button" onclick="calcBooking('minusAdults')" class="btn btn-default">-</button>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+													<span id="numOfAdults">1</span>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+													<button type="button" onclick="calcBooking('plusAdults')" class="btn btn-default">+</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row" style="line-height: 34px; margin-bottom: 5px;">
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+											Children
+										</div>
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+											<div class="row">
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+													<button type="button" onclick="calcBooking('minusChildren') "class="btn btn-default">-</button>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+													<span id="numOfChildren">1</span>
+												</div>
+												<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+													<button type="button" onclick="calcBooking('plusChildren') "class="btn btn-default">+</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<button type="button" class="btn btn-default">BOOK NOW</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row" style="background: black; padding-left: 10px; color:white;">
+			<h4>02 Phan Boi Chau Street, Nha Trang, Vietnam</h4>
+			<h4>Tel. 0093123123 Email. reservation@bavicohotelnhatrang.com</h4>
+		</div>
+	</div>
+</body>
+</html>
